@@ -1,13 +1,13 @@
 [
 {
   "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "name": "MinecraftMod",
+  "description": "No name yet.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["Perrybmw", "Ghosttje"],
+  "authorList": ["perrybmw", "Ghosttje"],
   "credits": "The Forge and FML guys, for making this example",
   "logoFile": "",
   "screenshots": [],
