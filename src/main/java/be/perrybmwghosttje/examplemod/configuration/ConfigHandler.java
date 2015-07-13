@@ -1,6 +1,6 @@
 package be.perrybmwghosttje.examplemod.configuration;
 
-import be.perrybmwghosttje.examplemod.information.BlockInfo;
+import be.perrybmwghosttje.examplemod.reference.BlockReference;
 import net.minecraftforge.common.config.Configuration;
 
 import java.io.File;
@@ -14,7 +14,7 @@ public class ConfigHandler {
     public static void init(File file)
     {
         conf = new Configuration(file);
-        BlockInfo.WirelessCharger.ID = conf.get(BlockInfo.Sections.BLOCKS, BlockInfo.WirelessCharger.NAME, BlockInfo.WirelessCharger.DEFAULT_ID).getInt();
+
         conf.save();
     }
 }
