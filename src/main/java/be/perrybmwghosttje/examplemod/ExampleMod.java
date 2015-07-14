@@ -2,7 +2,9 @@ package be.perrybmwghosttje.examplemod;
 
 import be.perrybmwghosttje.examplemod.core.init.ModBlocks;
 import be.perrybmwghosttje.examplemod.core.init.ModItems;
+import be.perrybmwghosttje.examplemod.proxies.IProxy;
 import be.perrybmwghosttje.examplemod.reference.ModReference;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.Mod;
@@ -15,11 +17,12 @@ public class ExampleMod
     @Mod.Instance(ModReference.MOD_ID)
     public static ExampleMod instance;
 
-//    @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
-//    public static IProxy proxy;
+    @SidedProxy(clientSide = ModReference.Proxies.CLIENT_PROXY_CLASS, serverSide = ModReference.Proxies.SERVER_PROXY_CLASS)
+    public static IProxy proxy;
 
     @EventHandler
-    public void preInit(FMLPreInitializationEvent event) {
+    public void preInit(FMLPreInitializationEvent event)
+    {
         ModBlocks.init();
         ModItems.init();
     }
@@ -27,11 +30,12 @@ public class ExampleMod
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-
+        proxy.initRenderingAndTextures();
     }
 
     @EventHandler
-    public void postInit(FMLPostInitializationEvent event) {
+    public void postInit(FMLPostInitializationEvent event)
+    {
 
     }
 }
