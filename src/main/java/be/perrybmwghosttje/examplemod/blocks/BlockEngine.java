@@ -1,6 +1,8 @@
 package be.perrybmwghosttje.examplemod.blocks;
 
+import be.perrybmwghosttje.examplemod.core.CreativeTabs;
 import be.perrybmwghosttje.examplemod.reference.BlockReference;
+import be.perrybmwghosttje.examplemod.tileentities.TileEntityEngine;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
@@ -13,12 +15,13 @@ public class BlockEngine extends BlockContainer {
 
     public BlockEngine() {
         super(Material.rock);
+        setCreativeTab(CreativeTabs.Example_TAB);
         setBlockName(BlockReference.Engine.NAME);
     }
 
     @Override
     public TileEntity createNewTileEntity(World world, int i) {
-        return null;
+        return new TileEntityEngine();
     }
 
     @Override

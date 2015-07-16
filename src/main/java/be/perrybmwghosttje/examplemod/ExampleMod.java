@@ -1,7 +1,7 @@
 package be.perrybmwghosttje.examplemod;
 
-import be.perrybmwghosttje.examplemod.core.init.ModBlocks;
-import be.perrybmwghosttje.examplemod.core.init.ModItems;
+import be.perrybmwghosttje.examplemod.core.init.Blocks;
+import be.perrybmwghosttje.examplemod.core.init.Items;
 import be.perrybmwghosttje.examplemod.proxies.IProxy;
 import be.perrybmwghosttje.examplemod.reference.ModReference;
 import cpw.mods.fml.common.SidedProxy;
@@ -23,8 +23,8 @@ public class ExampleMod
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        ModBlocks.init();
-        ModItems.init();
+        Blocks.init();
+        Items.init();
     }
 
     @EventHandler

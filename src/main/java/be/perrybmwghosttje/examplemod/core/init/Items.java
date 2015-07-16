@@ -3,7 +3,7 @@ package be.perrybmwghosttje.examplemod.core.init;
 /**
  * Created by Kevin on 13/07/2015.
  */
-public class ModItems {
+public class Items {
 
     public static void init()
     {

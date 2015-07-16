@@ -8,7 +8,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 /**
  * Created by Kevin on 11/07/2015.
  */
-public class ModBlocks {
+public class Blocks {
 
     public static BlockWirelessCharger wirelessCharger = new BlockWirelessCharger();
     public static BlockEngine engine = new BlockEngine();
