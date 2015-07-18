@@ -1,7 +1,7 @@
 package be.perrybmwghosttje.examplemod.proxies;
 
-import be.perrybmwghosttje.examplemod.client.renderer.tileentities.TileEntityEngineRenderer;
-import be.perrybmwghosttje.examplemod.reference.BlockReference;
+import be.perrybmwghosttje.examplemod.client.renderer.tileentityrenderers.TileEntityEngineRenderer;
+import be.perrybmwghosttje.examplemod.references.BlockReferences;
 import be.perrybmwghosttje.examplemod.tileentities.TileEntityEngine;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
@@ -13,7 +13,7 @@ public class ClientProxy extends CommonProxy {
 
     @Override
     public void initRenderingAndTextures() {
-        BlockReference.Engine.RenderId = RenderingRegistry.getNextAvailableRenderId();
+        BlockReferences.Engine.RenderId = RenderingRegistry.getNextAvailableRenderId();
 
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityEngine.class, new TileEntityEngineRenderer());
     }

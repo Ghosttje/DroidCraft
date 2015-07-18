@@ -1,9 +1,9 @@
-package be.perrybmwghosttje.examplemod.reference;
+package be.perrybmwghosttje.examplemod.references;
 
 /**
  * Created by Kevin on 13/07/2015.
  */
-public final class ModReference {
+public final class ModReferences {
 
     public static final String LOWERCASE_MOD_ID = "examplemod";
     public static final String MOD_ID = "examplemod";

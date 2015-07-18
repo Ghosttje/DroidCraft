@@ -1,6 +1,5 @@
 package be.perrybmwghosttje.examplemod.configuration;
 
-import be.perrybmwghosttje.examplemod.reference.BlockReference;
 import net.minecraftforge.common.config.Configuration;
 
 import java.io.File;

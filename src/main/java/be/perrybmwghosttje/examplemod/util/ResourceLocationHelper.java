@@ -1,6 +1,6 @@
 package be.perrybmwghosttje.examplemod.util;
 
-import be.perrybmwghosttje.examplemod.reference.ModReference;
+import be.perrybmwghosttje.examplemod.references.ModReferences;
 import net.minecraft.util.ResourceLocation;
 
 /**
@@ -15,6 +15,6 @@ public class ResourceLocationHelper
 
     public static ResourceLocation getResourceLocation(String path)
     {
-        return getResourceLocation(ModReference.LOWERCASE_MOD_ID, path);
+        return getResourceLocation(ModReferences.LOWERCASE_MOD_ID, path);
     }
 }

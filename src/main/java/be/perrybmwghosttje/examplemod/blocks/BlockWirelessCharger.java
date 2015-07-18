@@ -1,7 +1,7 @@
 package be.perrybmwghosttje.examplemod.blocks;
 
 import be.perrybmwghosttje.examplemod.core.CreativeTabs;
-import be.perrybmwghosttje.examplemod.reference.BlockReference;
+import be.perrybmwghosttje.examplemod.references.BlockReferences;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -16,7 +16,7 @@ public class BlockWirelessCharger extends Block {
     public BlockWirelessCharger() {
         super(Material.rock);
         setCreativeTab(CreativeTabs.Example_TAB);
-        setBlockName(BlockReference.WirelessCharger.NAME);
+        setBlockName(BlockReferences.WirelessCharger.NAME);
     }
 
     @Override

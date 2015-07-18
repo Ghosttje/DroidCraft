@@ -2,7 +2,7 @@ package be.perrybmwghosttje.examplemod.core.init;
 
 import be.perrybmwghosttje.examplemod.blocks.BlockEngine;
 import be.perrybmwghosttje.examplemod.blocks.BlockWirelessCharger;
-import be.perrybmwghosttje.examplemod.reference.BlockReference;
+import be.perrybmwghosttje.examplemod.references.BlockReferences;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 /**
@@ -15,7 +15,7 @@ public class Blocks {
 
     public static void init()
     {
-        GameRegistry.registerBlock(wirelessCharger, BlockReference.WirelessCharger.UNLOCALIZED_NAME);
-        GameRegistry.registerBlock(engine, BlockReference.Engine.UNLOCALIZED_NAME);
+        GameRegistry.registerBlock(wirelessCharger, BlockReferences.WirelessCharger.UNLOCALIZED_NAME);
+        GameRegistry.registerBlock(engine, BlockReferences.Engine.UNLOCALIZED_NAME);
     }
 }

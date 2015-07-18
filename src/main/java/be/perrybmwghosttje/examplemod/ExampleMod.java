@@ -3,7 +3,7 @@ package be.perrybmwghosttje.examplemod;
 import be.perrybmwghosttje.examplemod.core.init.Blocks;
 import be.perrybmwghosttje.examplemod.core.init.Items;
 import be.perrybmwghosttje.examplemod.proxies.IProxy;
-import be.perrybmwghosttje.examplemod.reference.ModReference;
+import be.perrybmwghosttje.examplemod.references.ModReferences;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -11,13 +11,13 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 
-@Mod(modid = ModReference.MOD_ID, version = ModReference.VERSION)
+@Mod(modid = ModReferences.MOD_ID, version = ModReferences.VERSION)
 public class ExampleMod
 {
-    @Mod.Instance(ModReference.MOD_ID)
+    @Mod.Instance(ModReferences.MOD_ID)
     public static ExampleMod instance;
 
-    @SidedProxy(clientSide = ModReference.Proxies.CLIENT_PROXY_CLASS, serverSide = ModReference.Proxies.SERVER_PROXY_CLASS)
+    @SidedProxy(clientSide = ModReferences.Proxies.CLIENT_PROXY_CLASS, serverSide = ModReferences.Proxies.SERVER_PROXY_CLASS)
     public static IProxy proxy;
 
     @EventHandler
