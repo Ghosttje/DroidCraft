@@ -35,12 +35,12 @@ public class ItemRendererEngine implements IItemRenderer {
             }
             case EQUIPPED:
             {
-                renderEngine(0F, 0F, 1F);
+                renderEngine(0.5F, 1.5F, 0.5F);
                 return;
             }
             case EQUIPPED_FIRST_PERSON:
             {
-                renderEngine(0F, 0F, 0F);
+                renderEngine(0.5F, 1.5F, 0.5F);
                 return;
             }
             case INVENTORY:
