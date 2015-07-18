@@ -1,4 +1,4 @@
-package be.perrybmwghosttje.examplemod.client.renderer.tileentityrenderers;
+package be.perrybmwghosttje.examplemod.client.renderer.tileentities;
 
 import be.perrybmwghosttje.examplemod.client.renderer.models.ModelEngine;
 import be.perrybmwghosttje.examplemod.references.TextureReferences;
@@ -9,7 +9,7 @@ import org.lwjgl.opengl.GL11;
 /**
  * Created by Kevin on 18/07/2015.
  */
-public class TileEntityEngineRenderer extends TileEntitySpecialRenderer {
+public class TileEntityRendererEngine extends TileEntitySpecialRenderer {
 
     private ModelEngine model = new ModelEngine();
 
