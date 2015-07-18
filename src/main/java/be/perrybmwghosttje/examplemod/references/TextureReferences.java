@@ -13,6 +13,6 @@ public final class TextureReferences {
     public static final class Model
     {
         private static final String MODEL_TEXTURE_LOCATION = "textures/models/";
-        public static final ResourceLocation ENGINE = ResourceLocationHelper.getResourceLocation(MODEL_TEXTURE_LOCATION + "Engine.png");
+        public static final ResourceLocation ENGINE = ResourceLocationHelper.getResourceLocation(MODEL_TEXTURE_LOCATION + "engine.png");
     }
 }
