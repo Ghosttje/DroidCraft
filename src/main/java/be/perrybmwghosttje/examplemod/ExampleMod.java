@@ -2,6 +2,7 @@ package be.perrybmwghosttje.examplemod;
 
 import be.perrybmwghosttje.examplemod.core.init.Blocks;
 import be.perrybmwghosttje.examplemod.core.init.Items;
+import be.perrybmwghosttje.examplemod.handlers.GuiHandler;
 import be.perrybmwghosttje.examplemod.proxies.IProxy;
 import be.perrybmwghosttje.examplemod.references.ModReferences;
 import cpw.mods.fml.common.SidedProxy;
@@ -10,6 +11,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 
 @Mod(modid = ModReferences.MOD_ID, version = ModReferences.VERSION)
 public class ExampleMod
@@ -30,6 +32,7 @@ public class ExampleMod
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
+        NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
         proxy.initRenderingAndTextures();
     }
 

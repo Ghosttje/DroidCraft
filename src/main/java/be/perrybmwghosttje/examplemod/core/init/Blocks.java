@@ -15,7 +15,7 @@ public class Blocks {
 
     public static void init()
     {
-        GameRegistry.registerBlock(wirelessCharger, BlockReferences.WirelessCharger.UNLOCALIZED_NAME);
-        GameRegistry.registerBlock(engine, BlockReferences.Engine.UNLOCALIZED_NAME);
+        GameRegistry.registerBlock(wirelessCharger, BlockReferences.WirelessCharger.NAME);
+        GameRegistry.registerBlock(engine, BlockReferences.Engine.NAME);
     }
 }

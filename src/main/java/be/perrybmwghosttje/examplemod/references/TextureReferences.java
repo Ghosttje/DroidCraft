@@ -15,4 +15,10 @@ public final class TextureReferences {
         private static final String MODEL_TEXTURE_LOCATION = "textures/models/";
         public static final ResourceLocation ENGINE = ResourceLocationHelper.getResourceLocation(MODEL_TEXTURE_LOCATION + "engine.png");
     }
+
+    public static final class Gui
+    {
+        private static final String MODEL_TEXTURE_LOCATION = "textures/gui/";
+        public static final ResourceLocation ENGINE = ResourceLocationHelper.getResourceLocation(MODEL_TEXTURE_LOCATION + "blankgui.png");
+    }
 }

@@ -1,8 +1,11 @@
 package be.perrybmwghosttje.examplemod.blocks;
 
+import be.perrybmwghosttje.examplemod.ExampleMod;
 import be.perrybmwghosttje.examplemod.references.BlockReferences;
+import be.perrybmwghosttje.examplemod.references.GuiRefences;
 import be.perrybmwghosttje.examplemod.tileentities.TileEntityEngine;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
@@ -35,5 +38,11 @@ public class BlockEngine extends BlockTileEntityBase {
     @Override
     public TileEntity createNewTileEntity(World world, int i) {
         return new TileEntityEngine();
+    }
+
+    @Override
+    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float offX, float offY, float offZ) {
+        player.openGui(ExampleMod.instance, GuiRefences.ENGINE.ordinal(), world, x, y, z);
+        return true;
     }
 }
