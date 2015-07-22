@@ -13,7 +13,10 @@ public final class TextureReferences {
     public static final class Model
     {
         private static final String MODEL_TEXTURE_LOCATION = "textures/models/";
+        public static final ResourceLocation WIRLESSCHARGER = ResourceLocationHelper.getResourceLocation(MODEL_TEXTURE_LOCATION + "wirelesscharger.png");
         public static final ResourceLocation ENGINE = ResourceLocationHelper.getResourceLocation(MODEL_TEXTURE_LOCATION + "engine.png");
+        public static final ResourceLocation DYNAMO = ResourceLocationHelper.getResourceLocation(MODEL_TEXTURE_LOCATION + "dynamo.png");
+        public static final ResourceLocation AUTOMINER = ResourceLocationHelper.getResourceLocation(MODEL_TEXTURE_LOCATION + "autominer.png");
     }
 
     public static final class Gui

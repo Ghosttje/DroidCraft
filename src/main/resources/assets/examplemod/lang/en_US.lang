@@ -1,2 +1,5 @@
 #Blocks
 tile.examplemod:engine.name=Engine
+tile.examplemod:dynamo.name=Dynamo
+tile.examplemod:autominer.name=Auto Miner
+tile.examplemod:wirelessCharger.name=Wireless Charger

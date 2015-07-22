@@ -1,6 +1,6 @@
 package be.perrybmwghosttje.examplemod.client.renderer.items;
 
-import be.perrybmwghosttje.examplemod.client.renderer.models.ModelEngine;
+import be.perrybmwghosttje.examplemod.client.renderer.models.ModelDynamo;
 import be.perrybmwghosttje.examplemod.references.TextureReferences;
 import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.item.ItemStack;
@@ -10,9 +10,9 @@ import org.lwjgl.opengl.GL11;
 /**
  * Created by Kevin on 18/07/2015.
  */
-public class ItemRendererEngine implements IItemRenderer {
+public class ItemRendererDynamo implements IItemRenderer {
 
-    private ModelEngine modelEngine = new ModelEngine();
+    private ModelDynamo modelDynamo = new ModelDynamo();
 
     @Override
     public boolean handleRenderType(ItemStack itemStack, ItemRenderType itemRenderType) {
@@ -61,10 +61,10 @@ public class ItemRendererEngine implements IItemRenderer {
         GL11.glRotatef(180, 0f, 0f, 1f);
 
         // Bind texture
-        FMLClientHandler.instance().getClient().renderEngine.bindTexture(TextureReferences.Model.ENGINE);
+        FMLClientHandler.instance().getClient().renderEngine.bindTexture(TextureReferences.Model.DYNAMO);
 
         // Render
-        modelEngine.render(null, 0f, 0f, 0f, 0f, 0f, 0.0625F);
+        modelDynamo.render(null, 0f, 0f, 0f, 0f, 0f, 0.0625F);
 
         GL11.glPopMatrix();
     }

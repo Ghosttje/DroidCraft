@@ -205,32 +205,6 @@ public class ModelEngine extends ModelBase {
         Cilinder_Right_Front.render(f5);
     }
 
-    public void renderModel(float f5) {
-        Ground_Platform.render(f5);
-        On_Off_Panel.render(f5);
-        Generator_Base_Part.render(f5);
-        Front_Base_Part.render(f5);
-        Back_Base_Part.render(f5);
-        Left_From_Behind_Vertical_Support.render(f5);
-        Right_From_Behind_Vertical_Support.render(f5);
-        Up_From_Behind_Horizontal_Support.render(f5);
-        Right_Side_Up_Support.render(f5);
-        Left_Side_Up_Support.render(f5);
-        Left_From_Behind_Support_Leg.render(f5);
-        Left_Front_Support_Leg.render(f5);
-        Right_From_Behind_Support_Leg.render(f5);
-        Right_Front_Support_Leg.render(f5);
-        Back_Base_Part_2.render(f5);
-        Front_Right_Vertical_Support.render(f5);
-        Front_Left_Vertical_Support.render(f5);
-        Cilinder_Left_Back.render(f5);
-        Cilinder_Left_Middle.render(f5);
-        Cilinder_Left_Front.render(f5);
-        Cilinder_Right_Back.render(f5);
-        Cilinder_Right_Middle.render(f5);
-        Cilinder_Right_Front.render(f5);
-    }
-
     private void setRotation(ModelRenderer model, float x, float y, float z) {
         model.rotateAngleX = x;
         model.rotateAngleY = y;

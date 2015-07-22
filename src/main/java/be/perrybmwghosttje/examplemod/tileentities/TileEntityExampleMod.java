@@ -17,13 +17,11 @@ public class TileEntityExampleMod extends TileEntity {
 
     protected ForgeDirection orientation;
     protected byte state;
-    protected String customName;
 
     public TileEntityExampleMod()
     {
         orientation = ForgeDirection.SOUTH;
         state = 0;
-        customName = "";
     }
 
     public ForgeDirection getOrientation()
@@ -51,16 +49,6 @@ public class TileEntityExampleMod extends TileEntity {
         this.state = state;
     }
 
-    public String getCustomName()
-    {
-        return customName;
-    }
-
-    public void setCustomName(String customName)
-    {
-        this.customName = customName;
-    }
-
     @Override
     public void readFromNBT(NBTTagCompound nbtTagCompound)
     {
@@ -75,11 +63,6 @@ public class TileEntityExampleMod extends TileEntity {
         {
             this.state = nbtTagCompound.getByte(ModReferences.NBT.STATE);
         }
-
-        if (nbtTagCompound.hasKey(ModReferences.NBT.CUSTOM_NAME))
-        {
-            this.customName = nbtTagCompound.getString(ModReferences.NBT.CUSTOM_NAME);
-        }
     }
 
     @Override
@@ -89,15 +72,5 @@ public class TileEntityExampleMod extends TileEntity {
 
         nbtTagCompound.setByte(ModReferences.NBT.DIRECTION, (byte) orientation.ordinal());
         nbtTagCompound.setByte(ModReferences.NBT.STATE, state);
-
-        if (this.hasCustomName())
-        {
-            nbtTagCompound.setString(ModReferences.NBT.CUSTOM_NAME, customName);
-        }
-    }
-
-    public boolean hasCustomName()
-    {
-        return customName != null && customName.length() > 0;
     }
 }

@@ -71,14 +71,8 @@ public abstract class BlockTileEntityBase extends BlockContainer {
             {
                 direction = ForgeDirection.SOUTH.ordinal();
             }
-            else if (facing == 3)
-            {
+            else if (facing == 3) {
                 direction = ForgeDirection.WEST.ordinal();
-            }
-
-            if (itemStack.hasDisplayName())
-            {
-                ((TileEntityExampleMod) world.getTileEntity(x, y, z)).setCustomName(itemStack.getDisplayName());
             }
 
             ((TileEntityExampleMod) world.getTileEntity(x, y, z)).setOrientation(direction);
