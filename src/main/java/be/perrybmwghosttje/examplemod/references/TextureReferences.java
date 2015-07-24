@@ -23,5 +23,6 @@ public final class TextureReferences {
     {
         private static final String MODEL_TEXTURE_LOCATION = "textures/gui/";
         public static final ResourceLocation ENGINE = ResourceLocationHelper.getResourceLocation(MODEL_TEXTURE_LOCATION + "blankgui.png");
+        public static final ResourceLocation DYNAMO = ResourceLocationHelper.getResourceLocation(MODEL_TEXTURE_LOCATION + "generatorgui.png");
     }
 }
