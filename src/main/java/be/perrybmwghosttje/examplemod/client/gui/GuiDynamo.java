@@ -1,6 +1,6 @@
 package be.perrybmwghosttje.examplemod.client.gui;
 
-import be.perrybmwghosttje.examplemod.inventories.containers.ContainerDynamo;
+import be.perrybmwghosttje.examplemod.containers.ContainerDynamo;
 import be.perrybmwghosttje.examplemod.references.TextureReferences;
 import be.perrybmwghosttje.examplemod.tileentities.TileEntityDynamo;
 import cpw.mods.fml.relauncher.Side;

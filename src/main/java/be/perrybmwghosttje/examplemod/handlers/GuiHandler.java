@@ -2,7 +2,7 @@ package be.perrybmwghosttje.examplemod.handlers;
 
 import be.perrybmwghosttje.examplemod.client.gui.GuiDynamo;
 import be.perrybmwghosttje.examplemod.client.gui.GuiEngine;
-import be.perrybmwghosttje.examplemod.inventories.containers.ContainerDynamo;
+import be.perrybmwghosttje.examplemod.containers.ContainerDynamo;
 import be.perrybmwghosttje.examplemod.references.GuiRefences;
 import be.perrybmwghosttje.examplemod.tileentities.TileEntityDynamo;
 import cpw.mods.fml.common.network.IGuiHandler;
