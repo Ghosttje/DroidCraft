@@ -1,12 +1,15 @@
 package be.perrybmwghosttje.examplemod.client.gui;
 
 import be.perrybmwghosttje.examplemod.references.TextureReferences;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.gui.GuiScreen;
 import org.lwjgl.opengl.GL11;
 
 /**
  * Created by Kevin on 19/07/2015.
  */
+@SideOnly(Side.CLIENT)
 public class GuiEngine extends GuiScreen {
 
     private int xSize = 176;
