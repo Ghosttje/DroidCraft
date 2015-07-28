@@ -32,15 +32,15 @@ public class ClientProxy extends CommonProxy {
         BlockReferences.AutoMiner.RenderId = RenderingRegistry.getNextAvailableRenderId();
 
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityWirlessCharger.class, new TileEntityRendererWirelessCharger());
-        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(Blocks.wirelessCharger), new ItemRendererWirlessCharger());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(Blocks.WirelessCharger), new ItemRendererWirlessCharger());
 
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityEngine.class, new TileEntityRendererEngine());
-        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(Blocks.engine), new ItemRendererEngine());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(Blocks.Engine), new ItemRendererEngine());
 
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityDynamo.class, new TileEntityRendererDynamo());
-        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(Blocks.dynamo), new ItemRendererDynamo());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(Blocks.Dynamo), new ItemRendererDynamo());
 
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityAutoMiner.class, new TileEntityRendererAutoMiner());
-        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(Blocks.autoMiner), new ItemRendererAutoMiner());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(Blocks.AutoMiner), new ItemRendererAutoMiner());
     }
 }

@@ -3,6 +3,8 @@ package be.perrybmwghosttje.examplemod.references;
 import be.perrybmwghosttje.examplemod.util.ResourceLocationHelper;
 import net.minecraft.util.ResourceLocation;
 
+import javax.swing.*;
+
 /**
  * Created by Kevin on 16/07/2015.
  */
@@ -24,5 +26,10 @@ public final class TextureReferences {
         private static final String MODEL_TEXTURE_LOCATION = "textures/gui/";
         public static final ResourceLocation ENGINE = ResourceLocationHelper.getResourceLocation(MODEL_TEXTURE_LOCATION + "blankgui.png");
         public static final ResourceLocation DYNAMO = ResourceLocationHelper.getResourceLocation(MODEL_TEXTURE_LOCATION + "generatorgui.png");
+    }
+
+    public static final class Items
+    {
+        public static final String UPGRADES = "upgrades/";
     }
 }

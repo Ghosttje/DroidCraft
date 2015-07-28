@@ -18,6 +18,7 @@ public class BlockAutoMiner extends BlockTileEntityBase {
     public BlockAutoMiner() {
         super(Material.anvil);
         setHardness(5.0f);
+
         setBlockName(BlockReferences.AutoMiner.NAME);
     }
 

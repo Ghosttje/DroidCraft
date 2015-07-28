@@ -12,16 +12,16 @@ import cpw.mods.fml.common.registry.GameRegistry;
  */
 public class Blocks {
 
-    public static BlockWirelessCharger wirelessCharger = new BlockWirelessCharger();
-    public static BlockEngine engine = new BlockEngine();
-    public static BlockDynamo dynamo = new BlockDynamo();
-    public static BlockAutoMiner autoMiner = new BlockAutoMiner();
+    public static BlockWirelessCharger WirelessCharger = new BlockWirelessCharger();
+    public static BlockEngine Engine = new BlockEngine();
+    public static BlockDynamo Dynamo = new BlockDynamo();
+    public static BlockAutoMiner AutoMiner = new BlockAutoMiner();
 
     public static void init()
     {
-        GameRegistry.registerBlock(wirelessCharger, BlockReferences.WirelessCharger.NAME);
-        GameRegistry.registerBlock(engine, BlockReferences.Engine.NAME);
-        GameRegistry.registerBlock(dynamo, BlockReferences.Dynamo.NAME);
-        GameRegistry.registerBlock(autoMiner, BlockReferences.AutoMiner.NAME);
+        GameRegistry.registerBlock(WirelessCharger, BlockReferences.WirelessCharger.NAME);
+        GameRegistry.registerBlock(Engine, BlockReferences.Engine.NAME);
+        GameRegistry.registerBlock(Dynamo, BlockReferences.Dynamo.NAME);
+        GameRegistry.registerBlock(AutoMiner, BlockReferences.AutoMiner.NAME);
     }
 }
