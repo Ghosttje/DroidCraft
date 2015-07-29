@@ -1,5 +1,6 @@
 package be.perrybmwghosttje.examplemod.client.gui;
 
+import be.perrybmwghosttje.examplemod.client.gui.base.GuiUpgrades;
 import be.perrybmwghosttje.examplemod.containers.ContainerDynamo;
 import be.perrybmwghosttje.examplemod.references.TextureReferences;
 import be.perrybmwghosttje.examplemod.tileentities.TileEntityDynamo;
@@ -16,13 +17,17 @@ import org.lwjgl.opengl.GL11;
 public class GuiDynamo extends GuiContainer {
 
     private TileEntityDynamo tileEntityDynamo;
+    private GuiUpgrades upgrades;
 
     public GuiDynamo(InventoryPlayer inventoryPlayer, TileEntityDynamo tileEntityDynamo)
     {
         super(new ContainerDynamo(inventoryPlayer, tileEntityDynamo));
         this.tileEntityDynamo = tileEntityDynamo;
-        xSize = 211;
-        ySize = 221;
+
+        upgrades = new GuiUpgrades();
+
+        xSize = 176;
+        ySize = 222;
     }
 
     @Override

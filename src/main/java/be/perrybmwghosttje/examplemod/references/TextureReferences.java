@@ -24,6 +24,8 @@ public final class TextureReferences {
     public static final class Gui
     {
         private static final String MODEL_TEXTURE_LOCATION = "textures/gui/";
+        private static final String MODEL_TEXTURE_ELEMENTS_LOCATION = MODEL_TEXTURE_LOCATION + "elements/";
+        public static final ResourceLocation UPGRADESLOT = ResourceLocationHelper.getResourceLocation(MODEL_TEXTURE_ELEMENTS_LOCATION + "upgradeslot.png");
         public static final ResourceLocation ENGINE = ResourceLocationHelper.getResourceLocation(MODEL_TEXTURE_LOCATION + "blankgui.png");
         public static final ResourceLocation DYNAMO = ResourceLocationHelper.getResourceLocation(MODEL_TEXTURE_LOCATION + "generatorgui.png");
     }

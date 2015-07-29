@@ -1,25 +1,24 @@
-package be.perrybmwghosttje.examplemod.client.gui;
+package be.perrybmwghosttje.examplemod.client.gui.base;
 
 import be.perrybmwghosttje.examplemod.references.TextureReferences;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.gui.GuiScreen;
 import org.lwjgl.opengl.GL11;
 
 /**
- * Created by Kevin on 19/07/2015.
+ * Created by Kevin on 29/07/2015.
  */
-@SideOnly(Side.CLIENT)
-public class GuiEngine extends GuiScreen {
+public class GuiUpgrades extends GuiScreen {
 
-    private int xSize = 176;
-    private int ySize = 187;
+    private int xSize = 30;
+    private int ySize = 103;
 
     @Override
     public void drawScreen(int x, int y, float z) {
+        super.drawScreen(x, y, z);
+
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 
-        this.mc.getTextureManager().bindTexture(TextureReferences.Gui.ENGINE);
+        this.mc.getTextureManager().bindTexture(TextureReferences.Gui.UPGRADESLOT);
 
         int xStart = (width - xSize) / 2;
         int yStart = (height - ySize) / 2;
