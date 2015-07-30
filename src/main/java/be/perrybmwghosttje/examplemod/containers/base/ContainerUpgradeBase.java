@@ -1,5 +1,6 @@
 package be.perrybmwghosttje.examplemod.containers.base;
 
+import be.perrybmwghosttje.examplemod.tileentities.base.TileEntityUpgrades;
 import net.minecraft.entity.player.InventoryPlayer;
 
 /**
@@ -7,11 +8,12 @@ import net.minecraft.entity.player.InventoryPlayer;
  */
 public abstract class ContainerUpgradeBase extends ContainerBase {
 
-    //public final InventoryUpgradesBase inventoryUpgradesBase;
+    public TileEntityUpgrades tileEntityUpgrades;
 
-    public ContainerUpgradeBase(InventoryPlayer inventoryPlayer)
+    public ContainerUpgradeBase(InventoryPlayer inventoryPlayer, TileEntityUpgrades tileEntityUpgrades)
     {
         super(inventoryPlayer);
+        this.tileEntityUpgrades = tileEntityUpgrades;
 
         // Add the Alchemical Chest slots to the container
         /*for (int bagRowIndex = 0; bagRowIndex < bagInventoryRows; ++bagRowIndex)

@@ -1,6 +1,6 @@
 package be.perrybmwghosttje.examplemod.client.gui;
 
-import be.perrybmwghosttje.examplemod.client.gui.base.GuiUpgrades;
+import be.perrybmwghosttje.examplemod.client.gui.elements.GuiUpgrades;
 import be.perrybmwghosttje.examplemod.containers.ContainerDynamo;
 import be.perrybmwghosttje.examplemod.references.TextureReferences;
 import be.perrybmwghosttje.examplemod.tileentities.TileEntityDynamo;
@@ -17,21 +17,21 @@ import org.lwjgl.opengl.GL11;
 public class GuiDynamo extends GuiContainer {
 
     private TileEntityDynamo tileEntityDynamo;
-    private GuiUpgrades upgrades;
+    private GuiUpgrades guiUpgrades;
 
     public GuiDynamo(InventoryPlayer inventoryPlayer, TileEntityDynamo tileEntityDynamo)
     {
         super(new ContainerDynamo(inventoryPlayer, tileEntityDynamo));
         this.tileEntityDynamo = tileEntityDynamo;
 
-        upgrades = new GuiUpgrades();
+        guiUpgrades = new GuiUpgrades(tileEntityDynamo);
 
         xSize = 176;
         ySize = 222;
     }
 
     @Override
-    protected void drawGuiContainerBackgroundLayer(float v, int i, int i1) {
+    protected void drawGuiContainerBackgroundLayer(float delta, int x, int y) {
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 
         this.mc.getTextureManager().bindTexture(TextureReferences.Gui.DYNAMO);
@@ -39,5 +39,7 @@ public class GuiDynamo extends GuiContainer {
         int xStart = (width - xSize) / 2;
         int yStart = (height - ySize) / 2;
         this.drawTexturedModalRect(xStart, yStart, 0, 0, xSize, ySize);
+
+        guiUpgrades.drawBackGround(delta, xStart + xSize, yStart);
     }
 }

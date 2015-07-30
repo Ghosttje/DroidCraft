@@ -15,7 +15,7 @@ public class ContainerDynamo extends ContainerUpgradeBase {
 
     public ContainerDynamo(InventoryPlayer inventoryPlayer, TileEntityDynamo tileEntityDynamo)
     {
-        super(inventoryPlayer);
+        super(inventoryPlayer, tileEntityDynamo);
         this.tileEntityDynamo = tileEntityDynamo;
     }
 
