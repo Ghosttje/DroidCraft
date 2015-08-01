@@ -13,32 +13,13 @@ public abstract class ContainerUpgradeBase extends ContainerBase {
 
     public ContainerUpgradeBase(InventoryPlayer inventoryPlayer, TileEntityUpgrades tileEntityUpgrades)
     {
+        //TODO make coordinates generic
         super(inventoryPlayer);
         this.tileEntityUpgrades = tileEntityUpgrades;
 
         for(int i = 0; i < tileEntityUpgrades.getSizeInventory(); i++)
         {
-            this.addSlotToContainer(new Slot(tileEntityUpgrades, ))
+            this.addSlotToContainer(new Slot(tileEntityUpgrades, i, 189, 8 + i * 18));
         }
-
-        // Add the Alchemical Chest slots to the container
-        /*for (int bagRowIndex = 0; bagRowIndex < bagInventoryRows; ++bagRowIndex)
-        {
-            for (int bagColumnIndex = 0; bagColumnIndex < bagInventoryColumns; ++bagColumnIndex)
-            {
-                if (inventoryAlchemicalBag.parentItemStack.getItemDamage() == 0)
-                {
-                    this.addSlotToContainer(new SlotAlchemicalBag(this, inventoryAlchemicalBag, entityPlayer, bagColumnIndex + bagRowIndex * bagInventoryColumns, 8 + bagColumnIndex * 18, 18 + bagRowIndex * 18));
-                }
-                else if (inventoryAlchemicalBag.parentItemStack.getItemDamage() == 1)
-                {
-                    this.addSlotToContainer(new SlotAlchemicalBag(this, inventoryAlchemicalBag, entityPlayer, bagColumnIndex + bagRowIndex * bagInventoryColumns, 8 + bagColumnIndex * 18, 18 + bagRowIndex * 18));
-                }
-                else if (inventoryAlchemicalBag.parentItemStack.getItemDamage() == 2)
-                {
-                    this.addSlotToContainer(new SlotAlchemicalBag(this, inventoryAlchemicalBag, entityPlayer, bagColumnIndex + bagRowIndex * bagInventoryColumns, 8 + bagColumnIndex * 18, 8 + bagRowIndex * 18));
-                }
-            }
-        }*/
     }
 }

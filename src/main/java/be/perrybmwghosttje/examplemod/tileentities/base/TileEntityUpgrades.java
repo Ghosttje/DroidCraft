@@ -5,37 +5,31 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 
-import java.util.ArrayList;
-
 /**
  * Created by Kevin on 29/07/2015.
  */
 public class TileEntityUpgrades extends TileEntity implements IInventory {
 
-    protected ArrayList<ItemStack> upgrades;
-    protected int upgradeSlotCount;
+    protected ItemStack[] upgrades;
 
     public TileEntityUpgrades(int upgradeSlotCount)
     {
-        upgrades = new ArrayList<ItemStack>();
-        this.upgradeSlotCount = upgradeSlotCount;
+        upgrades = new ItemStack[upgradeSlotCount];
     }
 
     @Override
     public int getSizeInventory() {
-        return upgradeSlotCount;
+        return upgrades.length;
     }
 
     @Override
     public ItemStack getStackInSlot(int i) {
-        return upgrades.get(i);
+        return upgrades[i];
     }
 
     @Override
     public ItemStack decrStackSize(int i, int i1) {
         ItemStack itemStack = getStackInSlot(i);
-
-
 
         return itemStack;
     }
