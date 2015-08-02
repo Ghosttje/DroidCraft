@@ -4,6 +4,7 @@ import be.perrybmwghosttje.examplemod.client.gui.elements.GuiUpgrades;
 import be.perrybmwghosttje.examplemod.containers.ContainerDynamo;
 import be.perrybmwghosttje.examplemod.references.TextureReferences;
 import be.perrybmwghosttje.examplemod.tileentities.TileEntityDynamo;
+import be.perrybmwghosttje.examplemod.util.DrawHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -41,5 +42,8 @@ public class GuiDynamo extends GuiContainer {
         this.drawTexturedModalRect(xStart, yStart, 0, 0, xSize, ySize);
 
         guiUpgrades.drawBackGround(delta, xStart + xSize, yStart);
+
+        GL11.glColor4f(1f, 0f, 0f, 1f);
+        DrawHelper.glFillCircle(100, 100, 10f, 0);
     }
 }
