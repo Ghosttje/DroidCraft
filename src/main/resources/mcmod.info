@@ -1,13 +1,13 @@
 [
 {
-  "modid": "examplemod",
-  "name": "MinecraftMod",
+  "modid": "droidcraft",
+  "name": "DroidCraft",
   "description": "No name yet.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["perrybmw", "Ghosttje"],
+  "authorList": ["Perrybmw", "Ghosttje"],
   "credits": "The Forge and FML guys, for making this example",
   "logoFile": "",
   "screenshots": [],
