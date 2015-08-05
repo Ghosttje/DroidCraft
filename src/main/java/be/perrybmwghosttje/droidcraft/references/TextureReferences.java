@@ -17,6 +17,7 @@ public final class TextureReferences {
         public static final ResourceLocation ENGINE = ResourceLocationHelper.getResourceLocation(MODEL_TEXTURE_LOCATION + "engine.png");
         public static final ResourceLocation DYNAMO = ResourceLocationHelper.getResourceLocation(MODEL_TEXTURE_LOCATION + "dynamo.png");
         public static final ResourceLocation AUTOMINER = ResourceLocationHelper.getResourceLocation(MODEL_TEXTURE_LOCATION + "autominer.png");
+		public static final ResourceLocation DROID = ResourceLocationHelper.getResourceLocation(MODEL_TEXTURE_LOCATION + "droid.png");
     }
 
     public static final class Gui
@@ -26,6 +27,7 @@ public final class TextureReferences {
         public static final ResourceLocation UPGRADESLOT = ResourceLocationHelper.getResourceLocation(MODEL_TEXTURE_ELEMENTS_LOCATION + "upgradeslot.png");
         public static final ResourceLocation ENGINE = ResourceLocationHelper.getResourceLocation(MODEL_TEXTURE_LOCATION + "blankgui.png");
         public static final ResourceLocation DYNAMO = ResourceLocationHelper.getResourceLocation(MODEL_TEXTURE_LOCATION + "generatorgui.png");
+		public static final ResourceLocation ENGINE = ResourceLocationHelper.getResourceLocation(MODEL_TEXTURE_LOCATION + "enginegui.png");
     }
 
     public static final class Items
