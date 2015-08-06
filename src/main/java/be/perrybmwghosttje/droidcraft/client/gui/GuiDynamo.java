@@ -43,7 +43,18 @@ public class GuiDynamo extends GuiContainer {
 
         guiUpgrades.drawBackGround(delta, xStart + xSize, yStart);
 
-        GL11.glColor4f(1f, 0f, 0f, 1f);
-        DrawHelper.glFillCircle(100, 100, 10f, 0);
+        GL11.glEnable(GL11.GL_BLEND);
+        GL11.glDisable(GL11.GL_TEXTURE_2D);
+        GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+        //GL11.glColor4f(r, g, b, a);
+        //GL11.glPushMatrix();
+
+        GL11.glColor4f(1f, 1f, 1f, 1f);
+        DrawHelper.glFillCircle(50, 50, 10f, 30);
+        DrawHelper.glFillRect(10, 10, 100, 100);
+
+        //GL11.glPopMatrix();
+        GL11.glEnable(GL11.GL_TEXTURE_2D);
+        GL11.glDisable(GL11.GL_BLEND);
     }
 }

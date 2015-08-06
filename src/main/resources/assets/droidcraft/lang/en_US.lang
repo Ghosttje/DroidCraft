@@ -1,5 +1,5 @@
 #Blocks
-tile.examplemod:engine.name=Engine
-tile.examplemod:dynamo.name=Dynamo
-tile.examplemod:autominer.name=Auto Miner
-tile.examplemod:wirelessCharger.name=Wireless Charger
+tile.droidcraft:engine.name=Engine
+tile.droidcraft:dynamo.name=Dynamo
+tile.droidcraft:autominer.name=Auto Miner
+tile.droidcraft:wirelessCharger.name=Wireless Charger
