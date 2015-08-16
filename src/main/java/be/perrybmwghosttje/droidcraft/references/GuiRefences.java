@@ -7,5 +7,6 @@ public enum GuiRefences {
     WIRLESSCHARGER,
     ENGINE,
     DYNAMO,
-    AUTOMINER
+    AUTOMINER,
+    DROIDASSEMBLY
 }

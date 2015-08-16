@@ -27,4 +27,10 @@ public final class BlockReferences {
         public static final String NAME = "autominer";
         public static int RenderId;
     }
+
+    public static class DroidAssembly
+    {
+        public static final String NAME = "droidassembly";
+        public static int RenderId;
+    }
 }

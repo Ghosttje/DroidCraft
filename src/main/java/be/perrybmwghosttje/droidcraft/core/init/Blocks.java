@@ -1,9 +1,6 @@
 package be.perrybmwghosttje.droidcraft.core.init;
 
-import be.perrybmwghosttje.droidcraft.blocks.BlockAutoMiner;
-import be.perrybmwghosttje.droidcraft.blocks.BlockDynamo;
-import be.perrybmwghosttje.droidcraft.blocks.BlockEngine;
-import be.perrybmwghosttje.droidcraft.blocks.BlockWirelessCharger;
+import be.perrybmwghosttje.droidcraft.blocks.*;
 import be.perrybmwghosttje.droidcraft.references.BlockReferences;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -16,6 +13,7 @@ public class Blocks {
     public static BlockEngine Engine = new BlockEngine();
     public static BlockDynamo Dynamo = new BlockDynamo();
     public static BlockAutoMiner AutoMiner = new BlockAutoMiner();
+    public static BlockDroidAssembly DroidAssembly = new BlockDroidAssembly();
 
     public static void init()
     {
@@ -23,5 +21,6 @@ public class Blocks {
         GameRegistry.registerBlock(Engine, BlockReferences.Engine.NAME);
         GameRegistry.registerBlock(Dynamo, BlockReferences.Dynamo.NAME);
         GameRegistry.registerBlock(AutoMiner, BlockReferences.AutoMiner.NAME);
+        GameRegistry.registerBlock(DroidAssembly, BlockReferences.DroidAssembly.NAME);
     }
 }
