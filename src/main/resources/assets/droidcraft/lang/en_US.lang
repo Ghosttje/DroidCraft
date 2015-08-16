@@ -1,5 +1,10 @@
+#ItemGroup
+itemGroup.droidcraft=DroidCraft
 #Blocks
 tile.droidcraft:engine.name=Engine
 tile.droidcraft:dynamo.name=Dynamo
 tile.droidcraft:autominer.name=Auto Miner
 tile.droidcraft:wirelessCharger.name=Wireless Charger
+tile.droidcraft:droidassembly.name=Droid Assembly
+#Items
+item.coil.name=Coil

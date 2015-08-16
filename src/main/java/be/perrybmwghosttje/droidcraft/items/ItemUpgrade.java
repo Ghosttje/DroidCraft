@@ -5,15 +5,15 @@ import be.perrybmwghosttje.droidcraft.items.base.ItemBase;
 import be.perrybmwghosttje.droidcraft.references.ItemReferences;
 
 /**
- * Created by Kevin on 28/07/2015.
+ * Created by kevin on 16-Aug-15.
  */
-public class ItemCoil extends ItemBase {
+public class ItemUpgrade extends ItemBase {
 
-    public ItemCoil()
+    public ItemUpgrade()
     {
         super();
         setCreativeTab(CreativeTabs.DroidCraft_TAB);
         setNoRepair();
-        setUnlocalizedName(ItemReferences.Coil.NAME);
+        setUnlocalizedName(ItemReferences.Upgrade.NAME);
     }
 }

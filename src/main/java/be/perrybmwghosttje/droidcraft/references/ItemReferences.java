@@ -8,4 +8,8 @@ public class ItemReferences {
     {
         public static final String NAME = "coil";
     }
+    public static class Upgrade
+    {
+        public static final String NAME = "upgrade";
+    }
 }

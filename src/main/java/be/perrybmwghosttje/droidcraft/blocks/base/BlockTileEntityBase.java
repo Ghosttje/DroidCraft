@@ -1,4 +1,4 @@
-package be.perrybmwghosttje.droidcraft.blocks;
+package be.perrybmwghosttje.droidcraft.blocks.base;
 
 import be.perrybmwghosttje.droidcraft.core.CreativeTabs;
 import be.perrybmwghosttje.droidcraft.references.TextureReferences;
@@ -29,7 +29,7 @@ public abstract class BlockTileEntityBase extends BlockContainer {
     protected BlockTileEntityBase(Material material)
     {
         super(material);
-        setCreativeTab(CreativeTabs.Example_TAB);
+        setCreativeTab(CreativeTabs.DroidCraft_TAB);
     }
 
     @Override

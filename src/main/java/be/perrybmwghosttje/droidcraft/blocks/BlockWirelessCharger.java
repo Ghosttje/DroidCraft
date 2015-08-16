@@ -1,6 +1,7 @@
 package be.perrybmwghosttje.droidcraft.blocks;
 
 import be.perrybmwghosttje.droidcraft.DroidCraft;
+import be.perrybmwghosttje.droidcraft.blocks.base.BlockTileEntityBase;
 import be.perrybmwghosttje.droidcraft.references.BlockReferences;
 import be.perrybmwghosttje.droidcraft.references.GuiRefences;
 import be.perrybmwghosttje.droidcraft.tileentities.TileEntityWirlessCharger;

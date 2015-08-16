@@ -1,10 +1,10 @@
 package be.perrybmwghosttje.droidcraft.blocks;
 
 import be.perrybmwghosttje.droidcraft.DroidCraft;
+import be.perrybmwghosttje.droidcraft.blocks.base.BlockTileEntityBase;
 import be.perrybmwghosttje.droidcraft.references.BlockReferences;
 import be.perrybmwghosttje.droidcraft.references.GuiRefences;
 import be.perrybmwghosttje.droidcraft.tileentities.TileEntityDroidAssembly;
-import be.perrybmwghosttje.droidcraft.tileentities.TileEntityDynamo;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;

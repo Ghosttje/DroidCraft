@@ -2,7 +2,7 @@
 {
   "modid": "droidcraft",
   "name": "DroidCraft",
-  "description": "No name yet.",
+  "description": "A mod that will add droids to Minecraft, and some other random stuff!",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
