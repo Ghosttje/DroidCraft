@@ -22,7 +22,7 @@ public class TileEntityRendererAutoMiner extends TileEntitySpecialRenderer {
         GL11.glRotatef(180, 0f, 0f, 1f);
 
         // Bind texture
-        this.bindTexture(TextureReferences.Model.AUTOMINER);
+        this.bindTexture(TextureReferences.Models.AUTOMINER);
 
         GL11.glPushMatrix();
         model.render(null, 0f, 0f, 0f, 0f, 0f, 0.0625F);

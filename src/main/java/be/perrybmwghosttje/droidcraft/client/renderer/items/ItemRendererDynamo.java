@@ -61,7 +61,7 @@ public class ItemRendererDynamo implements IItemRenderer {
         GL11.glRotatef(180, 0f, 0f, 1f);
 
         // Bind texture
-        FMLClientHandler.instance().getClient().renderEngine.bindTexture(TextureReferences.Model.DYNAMO);
+        FMLClientHandler.instance().getClient().renderEngine.bindTexture(TextureReferences.Models.DYNAMO);
 
         // Render
         modelDynamo.render(null, 0f, 0f, 0f, 0f, 0f, 0.0625F);

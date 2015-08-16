@@ -1,6 +1,5 @@
 package be.perrybmwghosttje.droidcraft.client.renderer.tileentities;
 
-import be.perrybmwghosttje.droidcraft.client.renderer.models.ModelAutoMiner;
 import be.perrybmwghosttje.droidcraft.client.renderer.models.ModelDynamo;
 import be.perrybmwghosttje.droidcraft.references.TextureReferences;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
@@ -23,7 +22,7 @@ public class TileEntityRendererDroidAssembly extends TileEntitySpecialRenderer {
         GL11.glRotatef(180, 0f, 0f, 1f);
 
         // Bind texture
-        this.bindTexture(TextureReferences.Model.DROIDASSEMBLY);
+        this.bindTexture(TextureReferences.Models.DROIDASSEMBLY);
 
         GL11.glPushMatrix();
         model.render(null, 0f, 0f, 0f, 0f, 0f, 0.0625F);

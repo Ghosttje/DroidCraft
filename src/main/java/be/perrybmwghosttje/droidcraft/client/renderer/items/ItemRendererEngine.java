@@ -61,7 +61,7 @@ public class ItemRendererEngine implements IItemRenderer {
         GL11.glRotatef(180, 0f, 0f, 1f);
 
         // Bind texture
-        FMLClientHandler.instance().getClient().renderEngine.bindTexture(TextureReferences.Model.ENGINE);
+        FMLClientHandler.instance().getClient().renderEngine.bindTexture(TextureReferences.Models.ENGINE);
 
         // Render
         modelEngine.render(null, 0f, 0f, 0f, 0f, 0f, 0.0625F);

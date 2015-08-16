@@ -22,7 +22,7 @@ public class TileEntityRendererEngine extends TileEntitySpecialRenderer {
         GL11.glRotatef(180, 0f, 0f, 1f);
 
         // Bind texture
-        this.bindTexture(TextureReferences.Model.ENGINE);
+        this.bindTexture(TextureReferences.Models.ENGINE);
 
         GL11.glPushMatrix();
         model.render(null, 0f, 0f, 0f, 0f, 0f, 0.0625F);
