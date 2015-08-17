@@ -8,6 +8,6 @@ import be.perrybmwghosttje.droidcraft.tileentities.base.TileEntityUpgrades;
 public class TileEntityDynamo extends TileEntityUpgrades {
 
     public TileEntityDynamo() {
-        super(5);
+        super(3);
     }
 }
