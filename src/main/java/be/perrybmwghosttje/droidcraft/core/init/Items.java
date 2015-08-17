@@ -16,6 +16,6 @@ public class Items {
     public static void init()
     {
         GameRegistry.registerItem(Coil, ItemReferences.Coil.NAME);
-        GameRegistry.registerItem(Upgrade, ItemReferences.Upgrade.NAME);
+        GameRegistry.registerItem(Upgrade, "upgrade");
     }
 }
