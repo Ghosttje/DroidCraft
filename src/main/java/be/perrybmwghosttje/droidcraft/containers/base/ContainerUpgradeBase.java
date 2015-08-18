@@ -11,15 +11,22 @@ public abstract class ContainerUpgradeBase extends ContainerBase {
 
     public TileEntityUpgrades tileEntityUpgrades;
 
+    protected int xUpgrade;
+    protected int yUpgrade;
+
     public ContainerUpgradeBase(InventoryPlayer inventoryPlayer, TileEntityUpgrades tileEntityUpgrades)
     {
-        //TODO make coordinates generic
-        super(inventoryPlayer);
+        this(inventoryPlayer, tileEntityUpgrades, true);
+    }
+
+    public ContainerUpgradeBase(InventoryPlayer inventoryPlayer, TileEntityUpgrades tileEntityUpgrades, boolean hasInventory)
+    {
+        super(inventoryPlayer, hasInventory);
         this.tileEntityUpgrades = tileEntityUpgrades;
 
         for(int i = 0; i < tileEntityUpgrades.getSizeInventory(); i++)
         {
-            this.addSlotToContainer(new Slot(tileEntityUpgrades, i, 189, 8 + i * 18));
+            this.addSlotToContainer(new Slot(tileEntityUpgrades, i, xUpgrade, yUpgrade + i * 18));
         }
     }
 }

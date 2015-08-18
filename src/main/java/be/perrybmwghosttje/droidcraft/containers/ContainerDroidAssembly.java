@@ -2,7 +2,6 @@ package be.perrybmwghosttje.droidcraft.containers;
 
 import be.perrybmwghosttje.droidcraft.containers.base.ContainerUpgradeBase;
 import be.perrybmwghosttje.droidcraft.tileentities.TileEntityDroidAssembly;
-import be.perrybmwghosttje.droidcraft.tileentities.TileEntityDynamo;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 
@@ -15,7 +14,11 @@ public class ContainerDroidAssembly extends ContainerUpgradeBase {
 
     public ContainerDroidAssembly(InventoryPlayer inventoryPlayer, TileEntityDroidAssembly tileEntityDynamo)
     {
-        super(inventoryPlayer, tileEntityDynamo);
+        super(inventoryPlayer, tileEntityDynamo, false);
+        xInventory = 8;
+        yInventory = 140;
+        xUpgrade = 189;
+        yUpgrade = 8;
         this.tileEntityDynamo = tileEntityDynamo;
     }
 

@@ -14,14 +14,23 @@ public abstract class ContainerBase extends Container {
     protected final int PLAYER_INVENTORY_ROWS = 3;
     protected final int PLAYER_INVENTORY_COLUMNS = 9;
 
+    protected int xInventory;
+    protected int yInventory;
+
+
     protected ContainerBase(InventoryPlayer inventoryPlayer)
+    {
+        this(inventoryPlayer, true);
+    }
+
+    protected ContainerBase(InventoryPlayer inventoryPlayer, boolean hasInventory)
     {
         // Add the player's inventory slots to the container
         for (int inventoryRowIndex = 0; inventoryRowIndex < PLAYER_INVENTORY_ROWS; ++inventoryRowIndex)
         {
             for (int inventoryColumnIndex = 0; inventoryColumnIndex < PLAYER_INVENTORY_COLUMNS; ++inventoryColumnIndex)
             {
-                this.addSlotToContainer(new Slot(inventoryPlayer, inventoryColumnIndex + inventoryRowIndex * 9 + 9, 8 + inventoryColumnIndex * 18, 140 + inventoryRowIndex * 18));
+                this.addSlotToContainer(new Slot(inventoryPlayer, inventoryColumnIndex + inventoryRowIndex * 9 + 9, xInventory + inventoryColumnIndex * 18, yInventory + inventoryRowIndex * 18));
             }
         }
 
