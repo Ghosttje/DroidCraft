@@ -1,6 +1,6 @@
 package be.perrybmwghosttje.droidcraft.containers.base;
 
-import be.perrybmwghosttje.droidcraft.tileentities.base.TileEntityUpgrades;
+import be.perrybmwghosttje.droidcraft.tileentities.base.TileEntityUpgrade;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Slot;
 
@@ -9,24 +9,24 @@ import net.minecraft.inventory.Slot;
  */
 public abstract class ContainerUpgradeBase extends ContainerBase {
 
-    public TileEntityUpgrades tileEntityUpgrades;
+    public TileEntityUpgrade tileEntityUpgrade;
 
     protected int xUpgrade;
     protected int yUpgrade;
 
-    public ContainerUpgradeBase(InventoryPlayer inventoryPlayer, TileEntityUpgrades tileEntityUpgrades)
+    public ContainerUpgradeBase(InventoryPlayer inventoryPlayer, TileEntityUpgrade tileEntityUpgrade)
     {
-        this(inventoryPlayer, tileEntityUpgrades, true);
+        this(inventoryPlayer, tileEntityUpgrade, true);
     }
 
-    public ContainerUpgradeBase(InventoryPlayer inventoryPlayer, TileEntityUpgrades tileEntityUpgrades, boolean hasInventory)
+    public ContainerUpgradeBase(InventoryPlayer inventoryPlayer, TileEntityUpgrade tileEntityUpgrade, boolean hasInventory)
     {
         super(inventoryPlayer, hasInventory);
-        this.tileEntityUpgrades = tileEntityUpgrades;
+        this.tileEntityUpgrade = tileEntityUpgrade;
 
-        for(int i = 0; i < tileEntityUpgrades.getSizeInventory(); i++)
+        for(int i = 0; i < tileEntityUpgrade.getSizeInventory(); i++)
         {
-            this.addSlotToContainer(new Slot(tileEntityUpgrades, i, xUpgrade, yUpgrade + i * 18));
+            this.addSlotToContainer(new Slot(tileEntityUpgrade, i, xUpgrade, yUpgrade + i * 18));
         }
     }
 }

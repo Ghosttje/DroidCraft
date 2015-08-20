@@ -8,11 +8,11 @@ import net.minecraft.tileentity.TileEntity;
 /**
  * Created by Kevin on 29/07/2015.
  */
-public class TileEntityUpgrades extends TileEntityBase implements IInventory {
+public class TileEntityUpgrade extends TileEntityBase implements IInventory {
 
     protected ItemStack[] upgrades;
 
-    public TileEntityUpgrades(int upgradeSlotCount)
+    public TileEntityUpgrade(int upgradeSlotCount)
     {
         upgrades = new ItemStack[upgradeSlotCount];
     }

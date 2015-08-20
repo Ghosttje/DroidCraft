@@ -2,7 +2,7 @@ package be.perrybmwghosttje.droidcraft.client.gui.elements;
 
 import be.perrybmwghosttje.droidcraft.client.gui.elements.base.GuiElementBase;
 import be.perrybmwghosttje.droidcraft.references.TextureReferences;
-import be.perrybmwghosttje.droidcraft.tileentities.base.TileEntityUpgrades;
+import be.perrybmwghosttje.droidcraft.tileentities.base.TileEntityUpgrade;
 import net.minecraft.client.Minecraft;
 import org.lwjgl.opengl.GL11;
 
@@ -16,11 +16,11 @@ public class GuiUpgrades extends GuiElementBase {
     private final int Margin = 5;
     private final int SlotSize = 18;
 
-    private TileEntityUpgrades tileEntityUpgrades;
+    private TileEntityUpgrade tileEntityUpgrade;
 
-    public GuiUpgrades(TileEntityUpgrades tileEntityUpgrades)
+    public GuiUpgrades(TileEntityUpgrade tileEntityUpgrade)
     {
-        this.tileEntityUpgrades = tileEntityUpgrades;
+        this.tileEntityUpgrade = tileEntityUpgrade;
     }
 
     @Override
@@ -32,11 +32,11 @@ public class GuiUpgrades extends GuiElementBase {
         Minecraft.getMinecraft().renderEngine.bindTexture(TextureReferences.Gui.UPGRADESLOT);
         drawTexturedModalRect(x + Margin, y, 0, 0, xSize, xSlotMarginHeight);
 
-        for (int i = 0; i < tileEntityUpgrades.getSizeInventory(); i++)
+        for (int i = 0; i < tileEntityUpgrade.getSizeInventory(); i++)
         {
             drawTexturedModalRect(x + Margin, y + xSlotMarginHeight + i * SlotSize, 0, xSlotMarginHeight, xSize, SlotSize);
         }
 
-        drawTexturedModalRect(x + Margin, y + xSlotMarginHeight + tileEntityUpgrades.getSizeInventory() * SlotSize, 0, SlotSize + xSlotMarginHeight, xSize, xSlotMarginHeight);
+        drawTexturedModalRect(x + Margin, y + xSlotMarginHeight + tileEntityUpgrade.getSizeInventory() * SlotSize, 0, SlotSize + xSlotMarginHeight, xSize, xSlotMarginHeight);
     }
 }
