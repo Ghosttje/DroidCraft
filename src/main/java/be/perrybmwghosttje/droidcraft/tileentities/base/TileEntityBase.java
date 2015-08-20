@@ -1,4 +1,4 @@
-package be.perrybmwghosttje.droidcraft.tileentities;
+package be.perrybmwghosttje.droidcraft.tileentities.base;
 
 import be.perrybmwghosttje.droidcraft.references.ModReferences;
 import net.minecraft.nbt.NBTTagCompound;
@@ -8,12 +8,12 @@ import net.minecraftforge.common.util.ForgeDirection;
 /**
  * Created by Kevin on 19/07/2015.
  */
-public class TileEntityExampleMod extends TileEntity {
+public class TileEntityBase extends TileEntity {
 
     protected ForgeDirection orientation;
     protected byte state;
 
-    public TileEntityExampleMod()
+    public TileEntityBase()
     {
         orientation = ForgeDirection.SOUTH;
         state = 0;

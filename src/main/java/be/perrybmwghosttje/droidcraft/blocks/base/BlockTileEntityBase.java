@@ -2,7 +2,7 @@ package be.perrybmwghosttje.droidcraft.blocks.base;
 
 import be.perrybmwghosttje.droidcraft.core.CreativeTabs;
 import be.perrybmwghosttje.droidcraft.references.TextureReferences;
-import be.perrybmwghosttje.droidcraft.tileentities.TileEntityExampleMod;
+import be.perrybmwghosttje.droidcraft.tileentities.base.TileEntityBase;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.BlockContainer;
@@ -54,7 +54,7 @@ public abstract class BlockTileEntityBase extends BlockContainer {
     public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entityLiving, ItemStack itemStack)
     {
         super.onBlockPlacedBy(world, x, y, z, entityLiving, itemStack);
-        if (world.getTileEntity(x, y, z) instanceof TileEntityExampleMod)
+        if (world.getTileEntity(x, y, z) instanceof TileEntityBase)
         {
             int direction = 0;
             int facing = MathHelper.floor_double(entityLiving.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
@@ -75,7 +75,7 @@ public abstract class BlockTileEntityBase extends BlockContainer {
                 direction = ForgeDirection.WEST.ordinal();
             }
 
-            ((TileEntityExampleMod) world.getTileEntity(x, y, z)).setOrientation(direction);
+            ((TileEntityBase) world.getTileEntity(x, y, z)).setOrientation(direction);
         }
     }
 
