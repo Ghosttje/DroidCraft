@@ -1,11 +1,16 @@
 package be.perrybmwghosttje.droidcraft.tileentities;
 
 import be.perrybmwghosttje.droidcraft.tileentities.base.TileEntityBase;
+import be.perrybmwghosttje.droidcraft.util.InventoryHelper;
 import cofh.api.energy.EnergyStorage;
 import cofh.api.energy.IEnergyReceiver;
+import net.minecraft.block.Block;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityChest;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import java.util.ArrayList;
@@ -46,6 +51,8 @@ public class TileEntityAutoMiner extends TileEntityBase implements IEnergyReceiv
     public int range = 2;
     public int fortuneLevel = 0;
 
+    public Block changeBlockWith = Blocks.cobblestone;
+
     public int miningX;
     public int miningY;
     public int miningZ;
@@ -69,25 +76,33 @@ public class TileEntityAutoMiner extends TileEntityBase implements IEnergyReceiv
 
     public void mineBlock(int x, int y, int z) {
 
-        if (!worldObj.isAirBlock(x, y, z)) {
+        if (!worldObj.isAirBlock(x, y, z) && !worldObj.getBlock(x, y, z).equals(Blocks.bedrock)) {
 
-            ArrayList eff = worldObj.getBlock(x, y, z).getDrops(worldObj, x, y, z, worldObj.getBlockMetadata(x, y, z), fortuneLevel);
+            ArrayList eff = worldObj.getBlock(x, y, z).getDrops(worldObj, x, y, z, worldObj.getBlockMetadata(x, y, z), fortuneLevel) ;
             Iterator i = eff.iterator();
 
             while(i.hasNext()) {
+
                 ItemStack item = (ItemStack)i.next();
 
-                EntityItem eItem = new EntityItem(worldObj, this.xCoord, this.yCoord + 1, this.zCoord, item);
+                TileEntity tileEntity = worldObj.getTileEntity(this.xCoord, this.yCoord + 1, this.zCoord);
 
-                if(!worldObj.isRemote){
+                if(tileEntity instanceof TileEntityChest) {
+
+                   InventoryHelper.addToInventory(((TileEntityChest) tileEntity), item);
+
+                }else if(!worldObj.isRemote){
+
+                    EntityItem eItem = new EntityItem(worldObj, this.xCoord + 0.5, this.yCoord + 1, this.zCoord + 0.5, item);
                     worldObj.spawnEntityInWorld(eItem);
-                }
 
-               //if there is an inventory then add them there
+                }
 
             }
 
             worldObj.setBlockToAir(x, y, z);
+
+            worldObj.setBlock(x, y, z, changeBlockWith);
 
         }
 
@@ -136,20 +151,58 @@ public class TileEntityAutoMiner extends TileEntityBase implements IEnergyReceiv
     @Override
     public void updateEntity() {
 
-        if (isRunning == false){
-            isRunning = true;
-            startQuarry();
+        //If redstone signal is false then it will mine else it will not
+        boolean redstone = false;
+        for(ForgeDirection dir : ForgeDirection.VALID_DIRECTIONS) {
+            int redstoneSide = worldObj.getIndirectPowerLevelTo(this.xCoord + dir.offsetX, this.yCoord + dir.offsetY, this.zCoord + dir.offsetZ, dir.ordinal());
+            if(redstoneSide > 0) {
+                redstone = true;
+                break;
+            }
         }
 
-        timer++;
+        if (redstone == false) {
 
-        if (timer == autoMinerSpeed && isReady == false){
+            if (isRunning == false) {
+                isRunning = true;
+                startQuarry();
+            }
 
-            mineBlock(miningX, miningY, miningZ);
-            updateCoords(miningX, miningY, miningZ);
-            timer = 0;
+            timer++;
+
+            if (timer == autoMinerSpeed && isReady == false) {
+
+                mineBlock(miningX, miningY, miningZ);
+                updateCoords(miningX, miningY, miningZ);
+                timer = 0;
+
+            }
 
         }
+
+    }
+
+    //need to fix nbt
+
+    protected void writeEntityToNBT(NBTTagCompound nbt){
+
+        super.writeToNBT(nbt);
+        nbt.setInteger("miningX", miningX);
+        nbt.setInteger("miningY", miningY);
+        nbt.setInteger("miningZ", miningZ);
+        nbt.setInteger("maxX", maxX);
+        nbt.setInteger("maxZ", maxZ);
+
+    }
+
+    protected void readEntityFromNBT(NBTTagCompound nbt){
+
+        super.readFromNBT(nbt);
+        this.miningX = nbt.getInteger("miningX");
+        this.miningY = nbt.getInteger("miningY");
+        this.miningZ = nbt.getInteger("miningZ");
+        this.maxX = nbt.getInteger("maxX");
+        this.maxZ = nbt.getInteger("maxZ");
 
     }
 
