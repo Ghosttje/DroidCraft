@@ -13,6 +13,7 @@ import net.minecraft.world.World;
 /**
  * Created by Kevin on 22/07/2015.
  */
+
 public class BlockAutoMiner extends BlockTileEntityBase {
 
     public BlockAutoMiner() {
@@ -45,6 +46,23 @@ public class BlockAutoMiner extends BlockTileEntityBase {
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float offX, float offY, float offZ) {
         player.openGui(DroidCraft.instance, GuiRefences.AUTOMINER.ordinal(), world, x, y, z);
+
+        if (!world.isRemote && player.isSneaking()) {
+            //Player is Sneak + Right Clicking
+            TileEntity tile;
+            if ((tile = world.getTileEntity(x, y, z)) instanceof TileEntityAutoMiner) {
+
+                ((TileEntityAutoMiner) tile).writeChatMessage(player);
+
+            } else {
+                //Player is just clicking
+            }
+
+            return true;
+
+        }
+
         return true;
+
     }
 }
