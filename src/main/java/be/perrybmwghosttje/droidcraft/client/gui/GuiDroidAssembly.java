@@ -23,6 +23,7 @@ public class GuiDroidAssembly extends GuiContainer {
         super(new ContainerDroidAssembly(inventoryPlayer, tileEntityDynamo));
         this.tileEntityDynamo = tileEntityDynamo;
 
+        modelDroid = new ModelDroid();
         guiUpgrades = new GuiUpgrades(tileEntityDynamo);
 
         xSize = 256;
@@ -31,10 +32,13 @@ public class GuiDroidAssembly extends GuiContainer {
 
     @Override
     protected void drawGuiContainerForegroundLayer(int x, int y) {
+        GL11.glEnable(32826);
+        GL11.glEnable(2903);
+
         GL11.glPushMatrix();
 
         //This is setting the initial location.
-        GL11.glTranslatef((float) x + 0.5f, (float) y + 1.5f, 0.5f);
+        GL11.glTranslatef(0.5f, 1.5f, 0.5f);
         GL11.glRotatef(180, 0f, 0f, 1f);
 
         // Bind texture
@@ -45,6 +49,8 @@ public class GuiDroidAssembly extends GuiContainer {
         GL11.glPopMatrix();
 
         GL11.glPopMatrix();
+
+        GL11.glDisable(32826);
 
         super.drawGuiContainerForegroundLayer(x, y);
     }

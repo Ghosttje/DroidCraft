@@ -14,7 +14,7 @@ public class ContainerDroidAssembly extends ContainerUpgradeBase {
 
     public ContainerDroidAssembly(InventoryPlayer inventoryPlayer, TileEntityDroidAssembly tileEntityDynamo)
     {
-        super(inventoryPlayer, tileEntityDynamo, true);
+        super(inventoryPlayer, tileEntityDynamo, false);
         xUpgrade = 189;
         yUpgrade = 8;
         this.tileEntityDynamo = tileEntityDynamo;
