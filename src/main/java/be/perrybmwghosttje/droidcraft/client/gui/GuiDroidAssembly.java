@@ -38,7 +38,9 @@ public class GuiDroidAssembly extends GuiContainer {
         GL11.glPushMatrix();
 
         //This is setting the initial location.
-        GL11.glTranslatef(0.5f, 1.5f, 0.5f);
+        GL11.glTranslatef(130f, 375f, 100f);
+        float scale = 200f;
+        GL11.glScaled(-scale, scale, scale);
         GL11.glRotatef(180, 0f, 0f, 1f);
 
         // Bind texture
