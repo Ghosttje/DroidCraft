@@ -9,5 +9,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public interface IGuiElement {
+    void drawForeGround(int x, int y);
     void drawBackGround(float delta, int x, int y);
 }

@@ -8,7 +8,7 @@ import be.perrybmwghosttje.droidcraft.client.gui.elements.base.GuiElementBase;
 public class GuiPanel extends GuiElementBase {
 
     @Override
-    public void drawBackGround(float delta, int x, int y) {
+    public void drawForeGround(int x, int y) {
 
     }
 }
